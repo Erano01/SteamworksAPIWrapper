@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>me.erano.com</groupId>
+	<artifactId>SteamworksAPIWrapper</artifactId>
+	<packaging>nar</packaging>
+	<version>1.0</version>
+
+	<build>
+		<plugins>
+			<plugin>
+                <groupId>com.github.maven-nar</groupId>
+                <artifactId>nar-maven-plugin</artifactId>
+                <version>3.5.2</version>
+                <!-- extensions property must be true for packaging type nar-->
+                <extensions>true</extensions>
+                <!-- each saving pom.xml updates the project-->
+                <configuration>
+                    <libraries>
+                        <library>
+                            <type>executable</type>
+                            <run>false</run>
+                        </library>
+                    </libraries>
+                </configuration>
+            </plugin>
+		</plugins>
+	</build>
+
+</project>
